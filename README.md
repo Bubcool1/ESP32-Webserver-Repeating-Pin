@@ -65,7 +65,9 @@ curl --request POST \
 ## My Purpose
 I am using this web server to run an 'annoying machine', the 'machine' is an [animatronic dancing halloween themed skeleton with a pumpkin head](https://www.biglots.com/product/13-25-dancing-pumpkin-skeleton-animated-plush/p810523695) that was acquired from a classmate at UTC Reading that I have pulled apart and added an extra 2 wires to the button circuit then reassembled. I have then wired this into the ESP32 through a transistor controlled by pin 26 to join the wires together effectively replacing the button.
 
-TODO: Wiring diagram
+<img src="Pumpkin.jpg" width="420">
+<img src="Wiring Diagram.png" width="500">
+
 
 ## Future Plans
 I don't have many future plans for this yet, but if any do appear or I notice any issues I will be documenting that in the [GitHub Issues tab](https://github.com/Bubcool1/ESP32-Webserver-Repeating-Pin/issues).

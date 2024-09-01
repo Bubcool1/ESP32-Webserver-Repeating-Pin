@@ -47,9 +47,8 @@ If I made a request using the body in the [example](#body) then made another req
 3. Create a secrets.h file using the included secrets.h.template in the include directory.
 4. Update the secrets.h file with your WiFi credentials and other config.
 5. In VS Code go to the platformIO tab on the left bar, find the development profile and click Upload and Monitor
-6. Done! Connect to the correct network and use a tool like [Insomnia](https://insomnia.rest/) or [Postman](https://www.postman.com/) to use the endpoints above, described [here](#endpoints). The IP for the Esp32 will be outputted in the serial monitor after the upload is complete. You could also try using the hostname `ESP32-SERVER` but that was unsuccessful for me.
+6. Done! Connect to the correct network and use a tool like [Insomnia](https://insomnia.rest/) or [Postman](https://www.postman.com/) or the curl scripts below to use the endpoints above, described [here](#endpoints). The IP for the Esp32 will be outputted in the serial monitor after the upload is complete. You could also try using the hostname `ESP32-SERVER` but that was unsuccessful for me.
 
-You could also use these curl scripts to call the server.
 ```bash
 curl --request GET --url http://ESP32-SERVER/toggle
 
@@ -67,3 +66,6 @@ curl --request POST \
 I am using this web server to run an 'annoying machine', the 'machine' is an [animatronic dancing halloween themed skeleton with a pumpkin head](https://www.biglots.com/product/13-25-dancing-pumpkin-skeleton-animated-plush/p810523695) that was acquired from a classmate at UTC Reading that I have pulled apart and added an extra 2 wires to the button circuit then reassembled. I have then wired this into the ESP32 through a transistor controlled by pin 26 to join the wires together effectively replacing the button.
 
 TODO: Wiring diagram
+
+## Future Plans
+I don't have many future plans for this yet, but if any do appear or I notice any issues I will be documenting that in the [GitHub Issues tab](https://github.com/Bubcool1/ESP32-Webserver-Repeating-Pin/issues).

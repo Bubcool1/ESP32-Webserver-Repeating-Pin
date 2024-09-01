@@ -47,7 +47,7 @@ If I made a request using the body in the [example](#body) then made another req
 3. Create a secrets.h file using the included secrets.h.template in the include directory.
 4. Update the secrets.h file with your WiFi credentials and other config.
 5. In VS Code go to the platformIO tab on the left bar, find the development profile and click Upload and Monitor
-6. Done! Connect to the correct network and use a tool like [Insomnia](https://insomnia.rest/) or [Postman](https://www.postman.com/) or the curl scripts below to use the endpoints above, described [here](#endpoints). The IP for the Esp32 will be outputted in the serial monitor after the upload is complete. You could also try using the hostname `ESP32-SERVER` but that was unsuccessful for me.
+6. Done! Connect to the correct network and use a tool like [Insomnia](https://insomnia.rest/) or [Postman](https://www.postman.com/) or the curl scripts below to use the endpoints above, described [here](#endpoints). The IP for the Esp32 will be outputted in the serial monitor after the upload is complete or use the hostname `ESP32-SERVER`, when using the ESP32 in AP (Access Point) mode the IP will be `192.168.4.1`.
 
 ```bash
 curl --request GET --url http://ESP32-SERVER/toggle

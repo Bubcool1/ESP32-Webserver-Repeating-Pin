@@ -45,7 +45,7 @@ TaskHandle_t taskHandle = NULL;
 void setup()
 {
   Serial.begin(115200);
-  Serial.println("Starting...");
+  Serial.println("\nStarting...");
 
   WiFi.setHostname("ESP32-SERVER");
   if (useExistingNetwork) {
@@ -63,8 +63,13 @@ void setup()
     Serial.println(WiFi.localIP());
   } else {
     // Create WiFi Network
+    IPAddress local_IP = (192, 168, 4, 1);
+    IPAddress subnet = (255, 255, 0, 0);
+
     WiFi.mode(WIFI_AP);
+    WiFi.config(local_IP, local_IP, subnet);
     WiFi.softAP(ssid, password, 1, hideNetwork);
+    Serial.print("AP Started. IP: ");
     Serial.println(WiFi.softAPIP());
   }
 

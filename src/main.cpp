@@ -76,7 +76,7 @@ void setup()
 
   pinMode(output26, OUTPUT);
 
-  server.on("/toggle", HTTP_GET, [](AsyncWebServerRequest *request)
+  server.on("/toggle", HTTP_POST, [](AsyncWebServerRequest *request)
   { 
     togglePin();
     request -> send(202); 

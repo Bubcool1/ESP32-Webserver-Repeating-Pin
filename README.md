@@ -3,7 +3,7 @@ A web server that runs on an ESP32 that on calling an endpoint can toggle a pin 
 
 ## Endpoints
 ### /toggle
-This is a GET endpoint, used for toggling the pin on a one off basis, in the default state pin 26 what gets toggled. Read more about what I am using this for [here](#my-purpose)
+This is a POST endpoint, used for toggling the pin on a one off basis, in the default state pin 26 what gets toggled. Read more about what I am using this for [here](#my-purpose)
 
 There is no response body with this request, a status code of [202](http://http.cat/202) ([accepted](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/202))
 
@@ -50,7 +50,7 @@ If I made a request using the body in the [example](#body) then made another req
 6. Done! Connect to the correct network and use a tool like [Insomnia](https://insomnia.rest/) or [Postman](https://www.postman.com/) or the curl scripts below to use the endpoints above, described [here](#endpoints). The IP for the Esp32 will be outputted in the serial monitor after the upload is complete or use the hostname `ESP32-SERVER`, when using the ESP32 in AP (Access Point) mode the IP will be `192.168.4.1`.
 
 ```bash
-curl --request GET --url http://ESP32-SERVER/toggle
+curl --request POST --url http://ESP32-SERVER/toggle
 
 curl --request POST \
   --url http://ESP32-SERVER/config \
